@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/txtCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="15dp"
+        android:text="Status" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:id="@+id/myRelativeLayout"
+        android:background="#FFF"
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/totalWeightView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:drawableLeft="@drawable/scales"
+            android:drawablePadding="10dp"
+            android:elevation="3dp"
+            android:ems="10"
+            android:padding="13dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/whiteWeightView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/totalWeightView"
+            android:layout_alignEnd="@+id/totalWeightView"
+            android:layout_alignRight="@+id/totalWeightView"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:drawableLeft="@drawable/shirt_white"
+            android:drawablePadding="10dp"
+            android:elevation="3dp"
+            android:ems="10"
+            android:padding="13dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/colorWeightView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/whiteWeightView"
+            android:layout_alignRight="@+id/whiteWeightView"
+            android:layout_below="@+id/whiteWeightView"
+            android:background="@drawable/edittext_background"
+            android:padding="13dp"
+            android:elevation="3dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:drawableLeft="@drawable/shirt_color"
+            android:drawablePadding="10dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/blackWeightView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/colorWeightView"
+            android:layout_alignEnd="@+id/colorWeightView"
+            android:layout_alignRight="@+id/colorWeightView"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:drawableLeft="@drawable/shirt_dark"
+            android:drawablePadding="10dp"
+            android:elevation="3dp"
+            android:ems="10"
+            android:padding="13dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/humidityView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blackWeightView"
+            android:layout_alignEnd="@+id/blackWeightView"
+            android:layout_alignRight="@+id/blackWeightView"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:drawableLeft="@drawable/humidity"
+            android:drawablePadding="10dp"
+            android:elevation="3dp"
+            android:ems="10"
+            android:padding="13dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/maxCapacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/humidityView"
+            android:layout_alignEnd="@+id/blackWeightView"
+            android:layout_alignRight="@+id/blackWeightView"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:drawableLeft="@drawable/information"
+            android:drawablePadding="10dp"
+
+            android:elevation="3dp"
+            android:ems="10"
+            android:padding="13dp"
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/maxCapacity"
+            android:layout_alignEnd="@+id/totalWeightView"
+            android:layout_alignRight="@+id/totalWeightView"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <org.eazegraph.lib.charts.PieChart xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/pieChartKleur"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical">
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkRed"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Used"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp">
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccent"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Capacity left"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Color"
+                            android:paddingLeft="25dp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="3dp">
+
+                <org.eazegraph.lib.charts.PieChart xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/pieChartZwart"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical">
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Used"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp">
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccent"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Capacity left"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dark"
+                            android:paddingLeft="25dp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="3dp">
+
+                <org.eazegraph.lib.charts.PieChart xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/pieChartWit"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical">
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Used"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp">
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccent"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Capacity left"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="White"
+                            android:paddingLeft="25dp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

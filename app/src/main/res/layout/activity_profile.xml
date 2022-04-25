@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="#375bec"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/profile"
+                    android:layout_marginTop="15dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF000000"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edtNaam"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/profileImage"
+                                android:layout_alignEnd="@+id/profileImage"
+                                android:layout_alignRight="@+id/profileImage"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/edittext_background"
+                                android:drawableLeft="@drawable/user_generic"
+                                android:drawablePadding="10dp"
+                                android:elevation="3dp"
+                                android:ems="10"
+                                android:hint="Name"
+                                android:inputType="textPersonName"
+                                android:padding="13dp"
+                                android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtEmailLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edtNaam"
+                            android:layout_alignEnd="@+id/edtNaam"
+                            android:layout_alignRight="@+id/edtNaam"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/edittext_background"
+                            android:drawableLeft="@drawable/symbol_at"
+                            android:drawablePadding="10dp"
+                            android:elevation="3dp"
+                            android:ems="10"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:padding="13dp"
+                            android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtPhoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edtEmailLogin"
+                            android:layout_alignEnd="@+id/edtEmailLogin"
+                            android:layout_alignRight="@+id/edtEmailLogin"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/edittext_background"
+                            android:drawableLeft="@drawable/mobilephone"
+                            android:drawablePadding="10dp"
+                            android:elevation="3dp"
+                            android:ems="10"
+                            android:hint="Phonenumber"
+                            android:inputType="text"
+                            android:padding="13dp"
+                            android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtAdres"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edtPhoneNumber"
+                            android:layout_alignEnd="@+id/edtPhoneNumber"
+                            android:layout_alignRight="@+id/edtPhoneNumber"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/edittext_background"
+                            android:drawableLeft="@drawable/location_pin"
+                            android:drawablePadding="10dp"
+                            android:elevation="3dp"
+                            android:ems="10"
+                            android:hint="Address"
+                            android:inputType="text"
+                            android:padding="13dp"
+                            android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtMachine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edtAdres"
+                        android:layout_alignEnd="@+id/edtAdres"
+                        android:layout_alignRight="@+id/edtAdres"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/edittext_background"
+                        android:drawableLeft="@drawable/laundry_machine"
+                        android:drawablePadding="10dp"
+                        android:elevation="3dp"
+                        android:ems="10"
+                        android:padding="13dp"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnUpdateProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edtAdres"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:text="Update"
+                            android:textStyle="bold" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

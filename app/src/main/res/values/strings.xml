@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WashMe</string>
+    <string name="login_button">Inloggen</string>
+    <string name="signup_button">Aanmelden</string>
+    <string name="status_overview_button">Status</string>
+    <string name="status_header">Status</string>
+    <string name="humidity_tag">Vochtigheid:</string>
+    <string name="total_weight_tag">Totaal gewicht:</string>
+    <string name="white_weight_tag">Gewicht wit:</string>
+    <string name="color_weight_tag">Gewicht kleur:</string>
+
+</resources>

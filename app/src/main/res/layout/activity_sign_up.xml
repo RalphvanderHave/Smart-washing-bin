@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/txtCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="15dp"
+        android:text="Sign-up" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:id="@+id/myRelativeLayout"
+        android:background="#FFF"
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/edittext_background"
+            android:drawableLeft="@drawable/symbol_at"
+            android:drawablePadding="10dp"
+            android:elevation="3dp"
+            android:ems="10"
+            android:hint="Enter email address"
+            android:inputType="textEmailAddress"
+            android:padding="13dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/edtPassWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/edtEmail"
+            android:layout_alignRight="@+id/edtEmail"
+            android:layout_below="@+id/edtEmail"
+            android:background="@drawable/edittext_background"
+            android:padding="13dp"
+            android:elevation="3dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="Enter password"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/key"
+            android:drawablePadding="10dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/edtConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/edtEmail"
+            android:layout_alignRight="@+id/edtEmail"
+            android:layout_below="@+id/edtPassWord"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:background="@drawable/edittext_background"
+            android:padding="13dp"
+            android:elevation="3dp"
+            android:hint="Enter password again"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/rubberstamp"
+            android:drawablePadding="10dp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtConfirmPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Sign-up"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnRegister"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Already have an account?"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtSign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAccount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:text="Sign in"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</LinearLayout>
